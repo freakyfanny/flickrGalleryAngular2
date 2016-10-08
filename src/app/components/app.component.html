@@ -1,3 +1,12 @@
+<div class="header">
+  <div class="search">
+
+	<div class="search__inputs">
+		 <input type="text" name="fullname" id="fullname" placeholder="Full Name" autofill="autofill">
+		 <label for="fullname">Search</label>
+    </div></div>
+</div>
+
 <div class="wrapper">
     <h1>freakyfannygallery for flickr using Angular 2</h1>
 
@@ -11,6 +20,6 @@
     <button (click)="searchFlickrPhoto('white')" class="white"></button>
 
     <div class="tiles">
-        <div *ngFor="let photo of flickrPhotos" class="tile"><img src="{{photo.url}}"></div>
+        <div *ngFor="let photo of flickrPhotos" class="tile"><img src="{{photo.url}}"><label>{{photo.title}}</label></div>
     </div>
 </div>

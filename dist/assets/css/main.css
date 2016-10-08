@@ -1,14 +1,213 @@
-@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
-/* line 7, C:/Cygni/src/scss/main.scss */
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300);
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
   width: 100%;
   height: 100vh;
-  font-family: 'PT Sans';
+  font-family: 'Fira Sans';
   font-size: 18px; }
 
-/* line 15, C:/Cygni/src/scss/main.scss */
+@media only screen and (min-width: 1024px) {
+  body {
+    padding-top: 80px; } }
+
+.header {
+  height: 60px;
+  display: block;
+  padding: 10px;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  display: block;
+  font-size: 14px; }
+  .header .search {
+    margin: 0 auto;
+    align-vertical: middle;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%; }
+    .header .search .search__inputs {
+      display: flex;
+      flex-flow: column-reverse;
+      max-height: 65px;
+      margin-bottom: 10px;
+      width: 100%; }
+      .header .search .search__inputs label {
+        transition: all 200ms ease; }
+      .header .search .search__inputs input {
+        transition: all 200ms ease;
+        font-size: 24px;
+        border: 0;
+        border-bottom: 1px solid #000000;
+        color: #ffffff;
+        background-color: #000000;
+        -webkit-appearance: none;
+        border-radius: 0;
+        padding: 5px 0; }
+        .header .search .search__inputs input:focus {
+          outline: 0;
+          border-color: #4d4d4d; }
+        .header .search .search__inputs input:placeholder-shown + label {
+          color: #ffffff;
+          background-color: #000000;
+          cursor: text;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transform-origin: left bottom;
+          transform: translate(0, 2.125em) scale(1.5);
+          text-align: left; }
+        .header .search .search__inputs input:not(:placeholder-shown) + label,
+        .header .search .search__inputs input:focus + label {
+          color: #ffffff;
+          background-color: #000000;
+          transform: translate(0, 0) scale(1);
+          cursor: default;
+          color: #4d4d4d;
+          text-align: left; }
+    .header .search label {
+      max-width: 66.666%;
+      color: #999999; }
+    .header .search ::-webkit-input-placeholder {
+      opacity: 0;
+      transition: inherit; }
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 60px;
+    padding: 10px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-size: 14px; }
+    .header .search {
+      margin: 0 auto;
+      align-vertical: middle;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      width: 100%; }
+      .header .search .search__inputs {
+        display: flex;
+        flex-flow: column-reverse;
+        max-height: 65px;
+        margin-bottom: 10px;
+        width: 50%; }
+        .header .search .search__inputs label {
+          transition: all 200ms ease; }
+        .header .search .search__inputs input {
+          transition: all 200ms ease;
+          font-size: 24px;
+          border: 0;
+          border-bottom: 1px solid #000000;
+          color: #ffffff;
+          background-color: #000000;
+          -webkit-appearance: none;
+          border-radius: 0;
+          padding: 5px 0; }
+          .header .search .search__inputs input:focus {
+            outline: 0;
+            border-color: #4d4d4d; }
+          .header .search .search__inputs input:placeholder-shown + label {
+            color: #ffffff;
+            background-color: #000000;
+            cursor: text;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0, 2.125em) scale(1.5);
+            text-align: left; }
+          .header .search .search__inputs input:not(:placeholder-shown) + label,
+          .header .search .search__inputs input:focus + label {
+            color: #ffffff;
+            background-color: #000000;
+            transform: translate(0, 0) scale(1);
+            cursor: default;
+            color: #4d4d4d;
+            text-align: left; }
+      .header .search label {
+        max-width: 66.666%;
+        color: #999999; }
+      .header .search ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit; } }
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 60px;
+    padding: 10px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-size: 14px; }
+    .header .search {
+      margin: 0 auto;
+      align-vertical: middle;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      width: 100%; }
+      .header .search .search__inputs {
+        display: flex;
+        flex-flow: column-reverse;
+        max-height: 65px;
+        margin-bottom: 10px;
+        width: 50%; }
+        .header .search .search__inputs label {
+          transition: all 200ms ease; }
+        .header .search .search__inputs input {
+          transition: all 200ms ease;
+          font-size: 24px;
+          border: 0;
+          border-bottom: 1px solid #000000;
+          color: #ffffff;
+          background-color: #000000;
+          -webkit-appearance: none;
+          border-radius: 0;
+          padding: 5px 0; }
+          .header .search .search__inputs input:focus {
+            outline: 0;
+            border-color: #4d4d4d; }
+          .header .search .search__inputs input:placeholder-shown + label {
+            color: #ffffff;
+            background-color: #000000;
+            cursor: text;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0, 2.125em) scale(1.5);
+            text-align: left; }
+          .header .search .search__inputs input:not(:placeholder-shown) + label,
+          .header .search .search__inputs input:focus + label {
+            color: #ffffff;
+            background-color: #000000;
+            transform: translate(0, 0) scale(1);
+            cursor: default;
+            color: #4d4d4d;
+            text-align: left; }
+      .header .search label {
+        max-width: 66.666%;
+        color: #999999; }
+      .header .search ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit; } }
+
 .tiles {
   padding: 6vh 16vw;
   display: flex;
@@ -17,39 +216,64 @@ body {
   justify-content: center;
   position: relative; }
 
-/* line 23, C:/Cygni/src/scss/main.scss */
+/* line 27, C:/Cygni/src/scss/main.scss */
 .tile {
   margin: 15px;
   cursor: pointer;
   overflow: hidden;
   width: 18vw;
   height: 18vw; }
-  /* line 29, C:/Cygni/src/scss/main.scss */
   .tile img {
     width: 18vw;
     height: 18vw;
     width: 100%;
-    transition: transform 500ms ease; }
-    /* line 34, C:/Cygni/src/scss/main.scss */
+    transition: transform 500ms ease;
+    -moz-transition: transform 500ms ease;
+    -webkit-transition: transform 500ms ease; }
     .tile img:hover {
-      position: absolute;
       justify-content: center;
       transform: scale(1.1);
-      z-index: 4; }
+      z-index: 2; }
+    .tile img:hover + label {
+      display: block;
+      line-height: 35px;
+      position: relative;
+      left: 0;
+      bottom: 10%;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.4);
+      justify-content: center;
+      z-index: 3;
+      text-transform: uppercase;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      font-weight: 800;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      transition: all 1s ease-in-out 0.2s;
+      -moz-transition: all 1s ease-in-out .2s;
+      -webkit-transition: all 1s ease-in-out .2s; }
+    .tile img + label {
+      position: relative;
+      left: 0;
+      bottom: -10%; }
 
-/* line 43, C:/Cygni/src/scss/main.scss */
+/* line 47, C:/Cygni/src/scss/main.scss */
 .active {
-  position: 'absolute';
-  top: '50%';
-  left: '50%';
-  margin: '0';
-  marginTop: '-31vw';
-  marginLeft: '-31vw';
-  boxShadow: "0 0 40px 5px rgba(0, 0, 0, 0.3)";
-  transform: 'none'; }
-  /* line 44, C:/Cygni/src/scss/main.scss */
-  .active img {
-    width: '62vw';
-    height: '62vw'; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  marginTop: -31vw;
+  marginLeft: -31vw;
+  boxShadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
+  transform: none; }
+
+/* line 48, C:/Cygni/src/scss/main.scss */
+.active img {
+  width: 62vw;
+  height: 62vw; }
+
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
