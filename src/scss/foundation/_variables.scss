@@ -4,7 +4,7 @@ $mq-large: 	1024px;
 $color-primary: #000000;
 $color-background: #ffffff;
 $header-height: 60px;
-$padding: 10px;
+$spacing: 10px;
 
 //@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
 
@@ -24,6 +24,6 @@ body {
 //@media only screen and (min-width: $mq-medium) { @import "header-medium"; }
 @media only screen and (min-width: $mq-large) {
     body {
-      padding-top: $header-height + $padding*2;
+      padding-top: $header-height + $spacing*4;
     }
 }

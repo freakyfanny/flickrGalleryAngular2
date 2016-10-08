@@ -1,9 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter} from '@angular/core';
 import { FlickrService } from '../services/flickr.service';
 import { FlickrPhoto } from '../services/flickrphoto.model';
-//import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule, Http } from '@angular/http';
-import 'rxjs/Rx';
+
 
 @Component({
     selector: 'my-app',
@@ -12,17 +10,16 @@ import 'rxjs/Rx';
 })
 
 
-export class AppComponent implements OnInit {    
+export class AppComponent implements OnInit { 
     flickrPhotos: Array<FlickrPhoto> = [];
-    //searchForm = new FormControl();
     
     //includes http object to be used to get data in searchPhoto method
     constructor(private flickrService: FlickrService){       
         this.getRecentPhotos();
     }
 
-    searchFlickrPhoto(query: string) { 
-        this.flickrPhotos = this.flickrService.getFlickrResult(query);      
+    searchFlickrPhoto(searchPhrase: string) { 
+        this.flickrPhotos = this.flickrService.getFlickrResult(searchPhrase);      
     }
     
     getRecentPhotos() {    
@@ -31,5 +28,13 @@ export class AppComponent implements OnInit {
     
     ngOnInit() {
         this.getRecentPhotos();
+        
+/*        this.searchBox.valueChanges
+            .debounceTime(500)
+            .distinctUntilChanged()
+            .switchMap((query: string) => this.flickrService.getFlickrResult(query))
+            .subscribe(value => {
+                this.flickrPhotos.push(new FlickrPhoto(value.id, value.server, value.farm, value.secret, value.title, value.owner));                
+            });*/
     }
 }

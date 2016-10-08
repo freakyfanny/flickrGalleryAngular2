@@ -1,21 +1,23 @@
 .header {
-    display: block;
+    height: $header-height;
+    padding: $spacing;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 5;
-    height: $header-height;
-    padding: $padding;
     margin: 0px;
     background-color: black;
     color: white;
+    display: block;
     font-size: 14px;
     .search {
         margin: 0 auto;
-        align-vertical: middle;
         text-align: center;
         justify-content: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         .search__inputs {
@@ -30,6 +32,8 @@
             margin-bottom: 10px;
             width: 50%;
             label {
+                display: flex;
+                justify-content: flex-start;
                 -webkit-transition: all 200ms ease;
                 transition: all 200ms ease;
             }
@@ -49,6 +53,8 @@
                     border-color: mix($color-background, $color-primary, 30%);
                 }
                 &:placeholder-shown + label {
+                    display: flex;
+                    justify-content: flex-start;
                     color: $color-background;
                     background-color: $color-primary;
                     cursor: text;

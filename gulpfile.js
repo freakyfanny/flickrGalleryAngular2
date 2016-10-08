@@ -85,9 +85,7 @@ gulp.task('handlescripts', ['webpack']);
 
 gulp.task('dist', ['handlescripts', 'compilesass', 'handlelang', 'handleconfig'], function() {
   return    gulp.src(['src/img/**'] , { base: ''}). 
-                    pipe(gulp.dest(config.distimagespath)) &&
-            gulp.src(['src/fonts/**'] , { base: ''}). 
-                    pipe(gulp.dest(config.distfontpath)) &&
+                    pipe(gulp.dest(config.distimagespath))  &&
             gulp.src(['src/scss/main.css'], { base: '' }).
                     pipe(gulp.dest(config.distcsspath)) &&
             gulp.src(['index.html'], { base: './'}) 

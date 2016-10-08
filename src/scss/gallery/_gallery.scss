@@ -1,5 +1,4 @@
 .tiles {
-    padding: 6vh 16vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -11,7 +10,7 @@
 /* line 27, C:/Cygni/src/scss/main.scss */
 
 .tile {
-    margin: 15px;
+    margin: $spacing/5;
     cursor: pointer;
     overflow: hidden;
     width: 18vw;
@@ -23,13 +22,12 @@
         transition: transform 500ms ease;
         -moz-transition: transform 500ms ease;
         -webkit-transition: transform 500ms ease;
-        &:hover {
+        &:hover, &:focus {
             justify-content: center;
             transform: scale(1.1);
             z-index: 2;
         }
-        &:hover + label {  
-            display: block;
+        &:hover + label, &:focus + label {  
             line-height: 35px;
             position: relative;
             left: 0;
@@ -41,15 +39,18 @@
             text-transform: uppercase;
             text-shadow: 0 0 5px rgba(0,0,0,.6);
             font-weight: 800;
-            width: 100%;    
-            padding: 0;
+            width: 100%;      
             margin: 0;
-            transition: all 1s ease-in-out 0.2s;
-            -moz-transition: all 1s ease-in-out .2s;
-            -webkit-transition: all 1s ease-in-out .2s;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 800ms ease-in-out 0s;
+            -moz-transition: all 800ms ease-in-out 0s;
+            -webkit-transition: all 800ms ease-in-out 0s;
         }
         
         & + label {
+            overflow: hidden;
+            text-overflow: ellipsis;
             position: relative;
             left: 0;
             bottom: -10%;

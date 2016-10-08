@@ -1,10 +1,11 @@
-import {NgModule, APP_INITIALIZER} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-import { FlickrService } from './services/flickr.service';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule , FormControl,FormGroup} from '@angular/forms';
 import {HttpModule, Http} from '@angular/http';
-
+import { FlickrService } from './services/flickr.service';
+import {HeaderComponent} from './components/app.header.component';
 import {AppComponent} from './components/app.component';
+import 'rxjs/Rx';
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import {AppComponent} from './components/app.component';
         HttpModule
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent
     ],
     providers: [
         FlickrService
