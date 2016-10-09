@@ -4,61 +4,53 @@
     flex-direction: row;
     justify-content: center;
     position: relative;
-}
-
-
-/* line 27, C:/Cygni/src/scss/main.scss */
-
-.tile {
-    margin: $spacing/2;
-    cursor: pointer;
-    overflow: hidden;
-    width: 18vw;
-    height: 18vw;
-    img {
+    .tile {
+        margin: $spacing/2;
+        cursor: pointer;
+        overflow: hidden;
         width: 18vw;
         height: 18vw;
-        width: 100%;
-        transition: transform 500ms ease;
-        -moz-transition: transform 500ms ease;
-        -webkit-transition: transform 500ms ease;
-        &:hover {
-            justify-content: center;
-            transform: scale(1.1);
-            z-index: 2;
-        }
-        &:hover + label {  
-            display: block;
-            line-height: 35px;
-            position: relative;
-            left: 0;
-            bottom: 10%;
-            color: $color-background;
-            background-color: rgba(0,0,0,0.4);
-            justify-content: center;
-            z-index: 3;
-            text-transform: uppercase;
-            text-shadow: 0 0 5px rgba(0,0,0,.6);
-            font-weight: 800;
-            width: 100%;            
-            padding: 0 $spacing/2;
-            margin: 0;
-            transition: all 800ms ease-in-out 0s;
-            -moz-transition: all 800ms ease-in-out 0s;
-            -webkit-transition: all 800ms ease-in-out 0s;
-        }
-        
-        & + label {
-            position: relative;
-            left: 0;
-            bottom: -10%;
+        img {
+            width: 18vw;
+            height: 18vw;
+            width: 100%;
+            transition: transform 500ms ease;
+            -moz-transition: transform 500ms ease;
+            -webkit-transition: transform 500ms ease;
+            &:hover {
+                justify-content: center;
+                transform: scale(1.1);
+                z-index: 2;
+            }
+            &:hover + label, &:focus + label {
+                display: flex;
+                line-height: 35px;
+                position: relative;
+                left: 0;
+                right: 0;
+                bottom: 10%;
+                color: $color-background;
+                background-color: rgba(0, 0, 0, 0.4);
+                justify-content: center;
+                z-index: 3;
+                text-transform: uppercase;
+                text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+                font-weight: 800;
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: all 800ms ease-in-out 0s;
+                -moz-transition: all 800ms ease-in-out 0s;
+                -webkit-transition: all 800ms ease-in-out 0s;
+            }
+            & + label {
+                position: relative;
+                left: 0;
+                bottom: -10%;
+            }
         }
     }
-
 }
-
-
-/* line 47, C:/Cygni/src/scss/main.scss */
 
 .active {
     position: absolute;
@@ -71,13 +63,7 @@
     transform: none;
 }
 
-
-/* line 48, C:/Cygni/src/scss/main.scss */
-
 .active img {
     width: 62vw;
     height: 62vw;
 }
-
-
-/*# sourceMappingURL=main.css.map */
