@@ -53,7 +53,7 @@ export class FlickrService {
           'white':'c'
         }
 
-        let url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + this.flickrApiKey + '&tags=' + query + '&color_codes='+colorMap[color]+'&format=json&nojsoncallback=1';
+        let url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + this.flickrApiKey + '&text=' + query +'&tags=' + color + '&color_codes='+colorMap[color]+'&format=json&nojsoncallback=1';
         console.log(url);
         
         var maxPhotos = 30;  //amount of photos to display on the webpage
