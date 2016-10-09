@@ -43,6 +43,19 @@ var config = {
   tsconfigpath: "tsconfig.json"
 };
 
+var nodeMods = {
+    shim: 'node_modules/core-js/client/shim.min.js',
+    zone: 'node_modules/zone.js/dist/zone.js',
+    reflect: 'node_modules/reflect-metadata/Reflect.js',
+    rx: 'node_modules/rxjs/bundles/Rx.js',
+    angCore: 'node_modules/@angular/core/bundles/core.umd.js',
+    angCommon: 'node_modules/@angular/common/bundles/common.umd.js',
+    angCompiler: 'node_modules/@angular/compiler/bundles/compiler.umd.js',
+    angPB: 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
+    angPB2: 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+    nodeModulesPath: 'dist'
+};
+
 gulp.task('webpack', function(callback) {
     webpack(require('./config/webpack.dev.js'),
         function(err, stats) {
@@ -83,13 +96,36 @@ gulp.task('compilesass', function(){
 
 gulp.task('handlescripts', ['webpack']);
 
-gulp.task('dist', ['handlescripts', 'compilesass', 'handlelang', 'handleconfig'], function() {
+gulp.task('dist', ['handlescripts', 'compilesass', 'handlelang', 'handleconfig', 'nodeMods'], function() {
   return    gulp.src(['src/img/**'] , { base: ''}). 
                     pipe(gulp.dest(config.distimagespath))  &&
             gulp.src(['src/scss/main.css'], { base: '' }).
                     pipe(gulp.dest(config.distcsspath)) &&
             gulp.src(['index.html'], { base: './'}) 
                     .pipe(gulp.dest(config.distpath));
+});
+
+
+
+gulp.task('nodeMods', function() {
+  return    gulp.src([nodeMods.shim] , { base: './'}). 
+                    pipe(gulp.dest(nodeMods.nodeModulesPath))  &&
+            gulp.src([nodeMods.zone], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) &&
+            gulp.src([nodeMods.reflect], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) &&
+            gulp.src([nodeMods.rx], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) &&
+            gulp.src([nodeMods.angCore], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) && 
+            gulp.src([nodeMods.angCommon], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) &&
+            gulp.src([nodeMods.angCompiler], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) && 
+            gulp.src([nodeMods.angPB], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath)) &&    
+            gulp.src([nodeMods.angPB2], { base: './' }).
+                    pipe(gulp.dest(nodeMods.nodeModulesPath));
 });
 
 gulp.task("default", ["clean"], function() {
