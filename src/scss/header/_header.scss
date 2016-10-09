@@ -8,7 +8,6 @@
     font-size: 14px;
     .search {
         margin: 0 auto;
-        align-vertical: middle;
         text-align: center;
         justify-content: center;
         display: -webkit-box;
@@ -108,19 +107,19 @@ button {
     background-image: -moz-linear-gradient(top, #f00, #f22);
     background-image: -ms-linear-gradient(top, #f00, #f22);
     background-image: -o-linear-gradient(top, #f00, #f22);
-    background-image: linear-gradient(to bottom, #f00, #f22);    
+    background-image: linear-gradient(to bottom, #f00, #f22);
     &:hover {
         background: mix(#f00, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #f00, mix(#f00, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #f00, mix(#f00, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #f00, mix(#f00, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #f00, mix(#f00, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #f00, mix(#f00, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #f00, mix(#f00, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #f00, mix(#f00, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #f00, mix(#f00, #fff, 60%));
+        background-image: -o-linear-gradient(top, #f00, mix(#f00, #fff, 60%));
+        background-image: linear-gradient(to bottom, #f00, mix(#f00, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-.orange {    
+.orange {
     border: 1px solid #f30;
     background: #f30;
     background-image: -webkit-linear-gradient(top, #f30, #f60);
@@ -130,17 +129,16 @@ button {
     background-image: linear-gradient(to bottom, #f30, #f60);
     &:hover {
         background: mix(#f30, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #f30, mix(#f30, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #f30, mix(#f30, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #f30, mix(#f30, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #f30, mix(#f30, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #f30, mix(#f30, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #f30, mix(#f30, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #f30, mix(#f30, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #f30, mix(#f30, #fff, 60%));
+        background-image: -o-linear-gradient(top, #f30, mix(#f30, #fff, 60%));
+        background-image: linear-gradient(to bottom, #f30, mix(#f30, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-
-.yellow {    
+.yellow {
     border: 1px solid #FD0;
     background: #ff0;
     background-image: -webkit-linear-gradient(top, #ff0, #ff4);
@@ -150,17 +148,16 @@ button {
     background-image: linear-gradient(to bottom, #ff0, #ff4);
     &:hover {
         background: mix(#ff0, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #ff0, mix(#ff0, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #ff0, mix(#ff0, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #ff0, mix(#ff0, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #ff0, mix(#ff0, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #ff0, mix(#ff0, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #ff0, mix(#ff0, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #ff0, mix(#ff0, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #ff0, mix(#ff0, #fff, 60%));
+        background-image: -o-linear-gradient(top, #ff0, mix(#ff0, #fff, 60%));
+        background-image: linear-gradient(to bottom, #ff0, mix(#ff0, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-
-.green {    
+.green {
     border: 1px solid #09B500;
     background: #09B500;
     background-image: -webkit-linear-gradient(top, #09B500, #0f0);
@@ -170,17 +167,16 @@ button {
     background-image: linear-gradient(to bottom, #09B500, #0f0);
     &:hover {
         background: mix(#09B500, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #09B500, mix(#09B500, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #09B500, mix(#09B500, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #09B500, mix(#09B500, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #09B500, mix(#09B500, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #09B500, mix(#09B500, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #09B500, mix(#09B500, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #09B500, mix(#09B500, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #09B500, mix(#09B500, #fff, 60%));
+        background-image: -o-linear-gradient(top, #09B500, mix(#09B500, #fff, 60%));
+        background-image: linear-gradient(to bottom, #09B500, mix(#09B500, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-
-.blue {    
+.blue {
     border: 1px solid #00f;
     background: #00f;
     background-image: -webkit-linear-gradient(top, #00f, #33f);
@@ -190,16 +186,16 @@ button {
     background-image: linear-gradient(to bottom, #00f, #33f);
     &:hover {
         background: mix(#00f, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #00f, mix(#00f, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #00f, mix(#00f, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #00f, mix(#00f, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #00f, mix(#00f, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #00f, mix(#00f, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #00f, mix(#00f, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #00f, mix(#00f, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #00f, mix(#00f, #fff, 60%));
+        background-image: -o-linear-gradient(top, #00f, mix(#00f, #fff, 60%));
+        background-image: linear-gradient(to bottom, #00f, mix(#00f, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-.purple {    
+.purple {
     border: 1px solid #a0f;
     background: #a0f;
     background-image: -webkit-linear-gradient(top, #a0f, #C149FC);
@@ -209,16 +205,16 @@ button {
     background-image: linear-gradient(to bottom, #a0f, #C149FC);
     &:hover {
         background: mix(#a0f, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #a0f, mix(#a0f, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #a0f, mix(#a0f, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #a0f, mix(#a0f, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #a0f, mix(#a0f, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #a0f, mix(#a0f, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #a0f, mix(#a0f, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #a0f, mix(#a0f, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #a0f, mix(#a0f, #fff, 60%));
+        background-image: -o-linear-gradient(top, #a0f, mix(#a0f, #fff, 60%));
+        background-image: linear-gradient(to bottom, #a0f, mix(#a0f, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-.black {    
+.black {
     border: 1px solid #000;
     background: #000;
     background-image: -webkit-linear-gradient(top, #000, #222);
@@ -228,16 +224,16 @@ button {
     background-image: linear-gradient(to bottom, #000, #222);
     &:hover {
         background: mix(#000, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, #000, mix(#000, #fff, 60%) );
-        background-image: -moz-linear-gradient(top,  #000, mix(#000, #fff, 60%) );
-        background-image: -ms-linear-gradient(top,  #000, mix(#000, #fff, 60%) );
-        background-image: -o-linear-gradient(top,  #000, mix(#000, #fff, 60%) );
-        background-image: linear-gradient(to bottom,  #000, mix(#000, #fff, 60%) );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, #000, mix(#000, #fff, 60%));
+        background-image: -moz-linear-gradient(top, #000, mix(#000, #fff, 60%));
+        background-image: -ms-linear-gradient(top, #000, mix(#000, #fff, 60%));
+        background-image: -o-linear-gradient(top, #000, mix(#000, #fff, 60%));
+        background-image: linear-gradient(to bottom, #000, mix(#000, #fff, 60%));
+        text-decoration: none;
     }
 }
 
-.white {    
+.white {
     border: 1px solid #ccc;
     background: #ccc;
     background-image: -webkit-linear-gradient(top, #ccc, #fff);
@@ -247,11 +243,11 @@ button {
     background-image: linear-gradient(to bottom, #ccc, #fff);
     &:hover {
         background: mix(#ccc, #fff, 90%);
-        background-image: -webkit-linear-gradient(top, mix(#ccc, #fff, 60%), #fff );
-        background-image: -moz-linear-gradient(top,  mix(#ccc, #fff, 60%), #fff );
-        background-image: -ms-linear-gradient(top,  mix(#ccc, #fff, 60%), #fff );
-        background-image: -o-linear-gradient(top,  mix(#ccc, #fff, 60%), #fff );
-        background-image: linear-gradient(to bottom,  mix(#ccc, #fff, 60%), #fff );
-        text-decoration: none; 
+        background-image: -webkit-linear-gradient(top, mix(#ccc, #fff, 60%), #fff);
+        background-image: -moz-linear-gradient(top, mix(#ccc, #fff, 60%), #fff);
+        background-image: -ms-linear-gradient(top, mix(#ccc, #fff, 60%), #fff);
+        background-image: -o-linear-gradient(top, mix(#ccc, #fff, 60%), #fff);
+        background-image: linear-gradient(to bottom, mix(#ccc, #fff, 60%), #fff);
+        text-decoration: none;
     }
 }

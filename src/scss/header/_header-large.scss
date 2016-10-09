@@ -7,86 +7,16 @@
     right: 0;
     z-index: 5;
     margin: 0px;
-    background-color: black;
-    color: white;
-    display: block;
-    font-size: 14px;
     .search {
         margin: 0 auto;
-        text-align: center;
-        justify-content: center;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
         width: 100%;
         .search__inputs {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-flow: column-reverse;
-            -ms-flex-flow: column-reverse;
-            flex-flow: column-reverse;
             max-height: 65px;
             margin-bottom: 10px;
             width: 50%;
-            label {
-                display: flex;
-                justify-content: flex-start;
-                -webkit-transition: all 200ms ease;
-                transition: all 200ms ease;
-            }
             input {
-                -webkit-transition: all 200ms ease;
-                transition: all 200ms ease;
-                font-size: 24px;
-                border: 0;
-                border-bottom: 1px solid $color-primary;
-                color: #ffffff;
-                background-color: $color-primary;
-                -webkit-appearance: none;
-                border-radius: 0;
                 padding: 5px 0;
-                &:focus {
-                    outline: 0;
-                    border-color: mix($color-background, $color-primary, 30%);
-                }
-                &:placeholder-shown + label {
-                    display: flex;
-                    justify-content: flex-start;
-                    color: $color-background;
-                    background-color: $color-primary;
-                    cursor: text;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-transform-origin: left bottom;
-                    transform-origin: left bottom;
-                    -webkit-transform: translate(0, 2.125em) scale(1.5);
-                    transform: translate(0, 2.125em) scale(1.5);
-                    text-align: left;
-                }
-                &:not(:placeholder-shown) + label,
-                &:focus + label {
-                    color: $color-background;
-                    background-color: $color-primary;
-                    -webkit-transform: translate(0, 0) scale(1);
-                    transform: translate(0, 0) scale(1);
-                    cursor: default;
-                    color: mix(#fff, $color-primary, 30%);
-                    text-align: left;
-                }
             }
-        }
-        label {
-            max-width: 66.666%;
-            color: mix($color-background, $color-primary, 60%);
-        }
-        ::-webkit-input-placeholder {
-            opacity: 0;
-            -webkit-transition: inherit;
-            transition: inherit;
         }
     }
 }
