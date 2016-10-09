@@ -8,7 +8,7 @@ $spacing: 10px;
 
 //@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
 
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300);
+@import url(//fonts.googleapis.com/css?family=Fira+Sans:300);
 
 body {
   margin: 0;
@@ -20,8 +20,6 @@ body {
   font-size: 18px; 
 }
 
-
-//@media only screen and (min-width: $mq-medium) { @import "header-medium"; }
 @media only screen and (min-width: $mq-large) {
     body {
       padding-top: $header-height + $spacing*4;
