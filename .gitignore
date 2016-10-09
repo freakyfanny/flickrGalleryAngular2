@@ -27,11 +27,12 @@ coverage
 build/Release
 
 # Dependency directories
+!/dist/node_modules
 node_modules
 jspm_packages
 
 # Exclude everything in dist
-dist
+!/dist
 
 # Optional npm cache directory
 .npm
