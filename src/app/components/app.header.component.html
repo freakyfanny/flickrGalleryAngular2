@@ -1,18 +1,20 @@
 <div class="header">
-  <div class="search">
+    <div class="search">
 
-	<div class="search__inputs">
-		 <input #search type="text" name="search" id="search" placeholder="{{searchText}}" autofill="autofill" (change)="onSearch(search.value)">
-		 <label for="search">{{searchText}}</label>
-    </div></div>
+        <div class="search__inputs">
+            <input #search type="text" name="search" id="search" placeholder="{{searchText}}" autofill="autofill" (change)="onSearch(search.value)" [(ngModel)]="phrase">
+            <label for="search">{{searchText}}</label>
+        </div>
+    </div>
 </div>
 
-    
-    <button (click)="filterSearch('+ search.value + ' + '^red');" class="red"></button>
-    <button (click)="searchFlickrPhoto('orange')" class="orange"></button>
-    <button (click)="searchFlickrPhoto('yellow')" class="yellow"></button>
-    <button (click)="searchFlickrPhoto('green')" class="green"></button>
-    <button (click)="searchFlickrPhoto('blue')" class="blue"></button>
-    <button (click)="searchFlickrPhoto('purple')" class="purple"></button>
-    <button (click)="searchFlickrPhoto('black')" class="black"></button>
-    <button (click)="searchFlickrPhoto('white')" class="white"></button>
+    <h1>Flickrgallery using Angular 2</h1>
+
+<button (click)="filterSearch('red');" class="red"></button>
+<button (click)="filterSearch('orange')" class="orange"></button>
+<button (click)="filterSearch('yellow')" class="yellow"></button>
+<button (click)="filterSearch('green')" class="green"></button>
+<button (click)="filterSearch('blue')" class="blue"></button>
+<button (click)="filterSearch('purple')" class="purple"></button>
+<button (click)="filterSearch('black')" class="black"></button>
+<button (click)="filterSearch('white')" class="white"></button>

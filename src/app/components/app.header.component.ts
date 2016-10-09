@@ -10,7 +10,7 @@ import {HttpModule, Http} from '@angular/http';
 
 export class HeaderComponent {    
     searchText : string = "Search";
-    searchPhrase : string = "Search"
+    phrase : string = "Search";
     @Output() search: EventEmitter<any> = new EventEmitter<any>();
     @Output() filter: EventEmitter<any> = new EventEmitter<any>();
     
@@ -19,11 +19,14 @@ export class HeaderComponent {
        
     }
     
-    onSearch(searchPhrase : string) {           
-        this.search.emit(searchPhrase);
+    onSearch(phrase : string) {
+        this.phrase = phrase;
+        this.search.emit(phrase);
     }
     
-    filterSearch(query : string) {       this.filter.emit(query);
+    filterSearch(query : string) {       
+        query = this.phrase + '^' + query;
+        this.filter.emit(query);
     }
     
 }

@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     
     //search for photos with searchquery and color
     searchFilterFlickrPhoto(query:string) {
-        let search : string[] = query[1].split("\\^");
+        let search : string[] = query.split("^");
         this.flickrPhotos = this.flickrService.getFlickrFilterResult(search[0],search[1]);      
     }
     

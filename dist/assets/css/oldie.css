@@ -109,6 +109,96 @@ body {
       .header .search .search__inputs input {
         font-size: 26px; } }
 
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  border: none;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f06, #fc2d4c);
+    text-decoration: none; }
+
+.orange {
+  width: 1vw;
+  height: 1vw;
+  background: #f30;
+  background-image: linear-gradient(to bottom, #f30, #f60);
+  border: none;
+  border-radius: 5px; }
+  .orange:hover {
+    background: #f30;
+    background-image: linear-gradient(to bottom, #f03, #ff6e00);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+  .red:hover {
+    background: #f06;
+    background-image: linear-gradient(to bottom, #f03, #f06);
+    text-decoration: none; }
+
 .tiles {
   display: flex;
   flex-wrap: wrap;

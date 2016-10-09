@@ -83,17 +83,83 @@ body {
       opacity: 0;
       transition: inherit; }
 
-.red {
-  width: 1vw;
-  height: 1vw;
-  background: #f03;
-  background-image: linear-gradient(to bottom, #f03, #f00);
+button {
+  width: 2vw;
+  height: 2vw;
   border-radius: 5px; }
 
-.btn:hover {
-  background: #3cb0fd;
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none; }
+.red {
+  border: 1px solid #f03;
+  background: #f00;
+  border: none;
+  background-image: linear-gradient(to bottom, #f00, #f22); }
+  .red:hover {
+    background: #ff1a1a;
+    background-image: linear-gradient(to bottom, #f00, #ff6666);
+    text-decoration: none; }
+
+.orange {
+  border: 1px solid #f30;
+  background: #f30;
+  background-image: linear-gradient(to bottom, #f30, #f60); }
+  .orange:hover {
+    background: #ff471a;
+    background-image: linear-gradient(to bottom, #f30, #ff8566);
+    text-decoration: none; }
+
+.yellow {
+  border: 1px solid #FD0;
+  background: #ff0;
+  background-image: linear-gradient(to bottom, #ff0, #ff4); }
+  .yellow:hover {
+    background: #ffff1a;
+    background-image: linear-gradient(to bottom, #ff0, #ffff66);
+    text-decoration: none; }
+
+.green {
+  border: 1px solid #09B500;
+  background: #09B500;
+  background-image: linear-gradient(to bottom, #09B500, #0f0); }
+  .green:hover {
+    background: #22bc1a;
+    background-image: linear-gradient(to bottom, #09B500, #6bd366);
+    text-decoration: none; }
+
+.blue {
+  border: 1px solid #00f;
+  background: #00f;
+  background-image: linear-gradient(to bottom, #00f, #33f); }
+  .blue:hover {
+    background: #1a1aff;
+    background-image: linear-gradient(to bottom, #00f, #6666ff);
+    text-decoration: none; }
+
+.purple {
+  border: 1px solid #a0f;
+  background: #a0f;
+  background-image: linear-gradient(to bottom, #a0f, #C149FC); }
+  .purple:hover {
+    background: #b31aff;
+    background-image: linear-gradient(to bottom, #a0f, #cc66ff);
+    text-decoration: none; }
+
+.black {
+  border: 1px solid #000;
+  background: #000;
+  background-image: linear-gradient(to bottom, #000, #222); }
+  .black:hover {
+    background: #1a1a1a;
+    background-image: linear-gradient(to bottom, #000, #666666);
+    text-decoration: none; }
+
+.white {
+  border: 1px solid #ccc;
+  background: #ccc;
+  background-image: linear-gradient(to bottom, #ccc, #fff); }
+  .white:hover {
+    background: #d1d1d1;
+    background-image: linear-gradient(to bottom, #e0e0e0, #fff);
+    text-decoration: none; }
 
 @media only screen and (min-width: 768px) {
   .header {

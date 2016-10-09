@@ -14,7 +14,7 @@ export class FlickrService {
         let url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + this.flickrApiKey + '&tags=' + query +'&format=json&nojsoncallback=1';
         console.log(url);
         
-        var maxPhotos = 24;   //amount of photos to display on the webpage
+        var maxPhotos = 30;   //amount of photos to display on the webpage
         this.flickrPhotos = []; //removes all photos in the array
         
         this.http.get(url).map(res => res.json()).subscribe(
@@ -56,7 +56,7 @@ export class FlickrService {
         let url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + this.flickrApiKey + '&tags=' + query + '&color_codes='+colorMap[color]+'&format=json&nojsoncallback=1';
         console.log(url);
         
-        var maxPhotos = 24;  //amount of photos to display on the webpage
+        var maxPhotos = 30;  //amount of photos to display on the webpage
         this.flickrPhotos = []; //removes all photos in the array
         
         this.http.get(url).map(res => res.json()).subscribe(
@@ -85,7 +85,7 @@ export class FlickrService {
         let url= 'https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=' + this.flickrApiKey + '&format=json&nojsoncallback=1';
         console.log(url);
         
-        var maxPhotos = 24;  //amount of photos to display on the webpage
+        var maxPhotos = 30;  //amount of photos to display on the webpage
         this.flickrPhotos = []; //removes all photos in the array
         
         this.http.get(url).map(res => res.json()).subscribe(
