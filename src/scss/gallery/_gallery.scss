@@ -13,9 +13,13 @@
         overflow: hidden;
         width: 32vw;
         height: 32vw;
-        img {
+        .image {
             width: auto;
             height: 32vw;
+            background-color: transparent;
+            background-position: center 25%;
+            background-repeat: no-repeat;
+            background-size: cover;
             transition: transform 500ms ease;
             -moz-transition: transform 500ms ease;
             -webkit-transition: transform 500ms ease;
@@ -24,18 +28,14 @@
                 justify-content: center;
                 transform: scale(1.1);
                 z-index: 2;
+                label {                   
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 25vw;
+                }
             }
-            &:hover + label,
-            &:focus + label {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                transition: all 500ms ease-in-out 0s;
-                -moz-transition: all 500ms ease-in-out 0s;
-                -webkit-transition: all 500ms ease-in-out 0s;
-            }
-            & + label {
+            label {
                 color: $color-background;
                 background-color: rgba(0, 0, 0, 0.4);
                 text-transform: uppercase;
@@ -43,14 +43,14 @@
                 font-weight: 800;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                position: relative;
+                padding: 0 3vw 1vw 3vw;
                 height: 6vw;
-                line-height: 6.5vw;
+                line-height: 6vw;
                 font-size: 3vw;
-                position: relative;
-                z-index: 3;
-                left: 0;
-                bottom: -20%;
+                position: absolute;
+                z-index: -3;
+                left: 0;                
+                top: 29vw;
             }
         }
     }

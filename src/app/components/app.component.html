@@ -1,19 +1,10 @@
-<header (search)="searchFlickrPhoto($event)">   
+<header (search)="searchFlickrPhoto($event)" (filter)="searchFilterFlickrPhoto($event)">   
 </header>
    
    <div class="wrapper">
     <h1>Flickrgallery using Angular 2</h1>
-    
-    <button (click)="searchFlickrPhoto('red')" class="red"></button>
-    <button (click)="searchFlickrPhoto('orange')" class="orange"></button>
-    <button (click)="searchFlickrPhoto('yellow')" class="yellow"></button>
-    <button (click)="searchFlickrPhoto('green')" class="green"></button>
-    <button (click)="searchFlickrPhoto('blue')" class="blue"></button>
-    <button (click)="searchFlickrPhoto('purple')" class="purple"></button>
-    <button (click)="searchFlickrPhoto('black')" class="black"></button>
-    <button (click)="searchFlickrPhoto('white')" class="white"></button>
 
     <div class="tiles">
-        <div *ngFor="let photo of flickrPhotos" class="tile"><img src="{{photo.url}}"><label>{{photo.title}}</label></div>
+        <div *ngFor="let photo of flickrPhotos" class="tile"><photo [photo]="photo"></photo></div>
     </div>
 </div>

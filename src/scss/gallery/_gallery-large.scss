@@ -1,65 +1,48 @@
-.tiles {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    flex: auto;
-    .tile {
-        margin: $spacing/2;
-        cursor: pointer;
-        overflow: hidden;
-        max-width: 24vw;
-        min-width: 18vw;
-        height: 18vw;
-        img {
-            height: 18vw;
-            width: auto;
-            background-position: center 25%;
-            background-repeat: no-repeat;
-            &:hover + label,
-            &:focus + label {
-                display: flex;
-                line-height: 35px;
-                position: relative;
-                left: 0;
-                right: 0;
-                bottom: 10%;
-                color: $color-background;
-                background-color: rgba(0, 0, 0, 0.4);
-                justify-content: center;
-                z-index: 3;
-                text-transform: uppercase;
-                text-shadow: 0 0 5px rgba(0, 0, 0, .6);
-                font-weight: 800;
-                margin: 0;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transition: all 800ms ease-in-out 0s;
-                -moz-transition: all 800ms ease-in-out 0s;
-                -webkit-transition: all 800ms ease-in-out 0s;
-            }
-            & + label {
-                position: relative;
-                left: 0;
-                bottom: -10%;
-            }
-        }
+@keyframes title {
+    0% {
+        transform: translateX(6vw);
+    }
+    50% {
+        transform: translateY(4.5vw);
+    }
+    100% {
+        transform: translateY(-3vw);
     }
 }
 
-.active {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    marginTop: -31vw;
-    marginLeft: -31vw;
-    boxShadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
-    transform: none;
-}
-
-.active img {
-    width: 62vw;
-    height: 62vw;
+.tiles {
+    .tile {
+        margin: $spacing/2;        
+        width: 18vw;
+        height: 18vw;
+        .image {
+            height: 18vw;
+            &:hover,
+            &:focus {
+                -webkit-transition-property: transform;
+                -moz-transition-property: transform;
+                transition-property: transform;
+                label {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 18vw;
+                    -webkit-transform: translateY(-3vw);
+                    -moz-transform: translateY(-3vw);
+                    transform: translateY(-3vw);
+                    animation-name: title;
+                    animation-duration: 800ms;
+                    animation-delay: 0s;
+                    animation-timing-function: linear;
+                    animation-direction: alternate;
+                }
+            }
+            label {
+                line-height: 2.25vw;
+                height: 2vw;
+                font-size: 1vw;
+                padding: 0 1vw 1vw 1vw;
+            }
+        }
+    }
 }

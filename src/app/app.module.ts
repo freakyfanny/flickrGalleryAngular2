@@ -4,6 +4,7 @@ import { FormsModule , FormControl,FormGroup} from '@angular/forms';
 import {HttpModule, Http} from '@angular/http';
 import { FlickrService } from './services/flickr.service';
 import {HeaderComponent} from './components/app.header.component';
+import {PhotoComponent} from './components/app.photo.component';
 import {AppComponent} from './components/app.component';
 import 'rxjs/Rx';
 
@@ -15,7 +16,8 @@ import 'rxjs/Rx';
     ],
     declarations: [
         AppComponent,
-        HeaderComponent
+        HeaderComponent,
+        PhotoComponent
     ],
     providers: [
         FlickrService

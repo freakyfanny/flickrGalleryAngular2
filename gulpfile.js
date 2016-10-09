@@ -94,12 +94,27 @@ gulp.task('compilesass', function(){
       .pipe(gulp.dest(config.distcsspath));
 });
 
+gulp.task('oldie', function(){
+    return gulp.src(config.sasspath + '/oldie.scss')
+      .pipe(plumber())
+      .pipe(maps.init())
+      .pipe(sass())
+      .pipe(autoprefixer('last 1 version'))
+      .pipe(maps.write('./'))      .pipe(gulp.dest(config.distcsspath))
+      .pipe(minify())      
+      .pipe(rename({suffix:'.min'}))
+      .pipe(gulp.dest(config.distcsspath));
+});
+
+
 gulp.task('handlescripts', ['webpack']);
 
-gulp.task('dist', ['handlescripts', 'compilesass', 'handlelang', 'handleconfig', 'nodeMods'], function() {
+gulp.task('dist', ['handlescripts', 'compilesass', 'handlelang', 'handleconfig', 'nodeMods', 'oldie'], function() {
   return    gulp.src(['src/img/**'] , { base: ''}). 
                     pipe(gulp.dest(config.distimagespath))  &&
             gulp.src(['src/scss/main.css'], { base: '' }).
+                    pipe(gulp.dest(config.distcsspath)) &&      
+            gulp.src(['src/scss/oldie.css'], { base: '' }).
                     pipe(gulp.dest(config.distcsspath)) &&
             gulp.src(['index.html'], { base: './'}) 
                     .pipe(gulp.dest(config.distpath));
@@ -142,7 +157,7 @@ gulp.task('clean', function() {
 gulp.task('serve', ['watch','runnode']);
 
 gulp.task('watch', function() {
-  gulp.watch('src/scss/**/*.scss', ['compilesass']);
+  gulp.watch('src/scss/**/*.scss', ['compilesass', 'oldie']);
   gulp.watch('lang_files/*', ['handlelang']);
   gulp.watch('src/config/*', ['handleconfig']);
   var webpackConfig = require('./config/webpack.dev.js');

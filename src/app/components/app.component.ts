@@ -18,23 +18,23 @@ export class AppComponent implements OnInit {
         this.getRecentPhotos();
     }
 
+    //find phots just with search
     searchFlickrPhoto(searchPhrase: string) { 
         this.flickrPhotos = this.flickrService.getFlickrResult(searchPhrase);      
     }
     
+    //search for photos with searchquery and color
+    searchFilterFlickrPhoto(query:string) {
+        let search : string[] = query[1].split("\\^");
+        this.flickrPhotos = this.flickrService.getFlickrFilterResult(search[0],search[1]);      
+    }
+    
+    //gets the recent photos    
     getRecentPhotos() {    
         this.flickrPhotos = this.flickrService.getRecent();  
     }
     
     ngOnInit() {
         this.getRecentPhotos();
-        
-/*        this.searchBox.valueChanges
-            .debounceTime(500)
-            .distinctUntilChanged()
-            .switchMap((query: string) => this.flickrService.getFlickrResult(query))
-            .subscribe(value => {
-                this.flickrPhotos.push(new FlickrPhoto(value.id, value.server, value.farm, value.secret, value.title, value.owner));                
-            });*/
     }
 }

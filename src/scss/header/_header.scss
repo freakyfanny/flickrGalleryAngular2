@@ -91,3 +91,29 @@
         }
     }
 }
+
+
+
+.red {
+    width:1vw;
+    height:1vw;
+  background: #f03;
+  background-image: -webkit-linear-gradient(top, #f03, #f00);
+  background-image: -moz-linear-gradient(top, #f03, #f00);
+  background-image: -ms-linear-gradient(top,#f03, #f00);
+  background-image: -o-linear-gradient(top, #f03, #f00);
+  background-image: linear-gradient(to bottom,#f03, #f00);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}

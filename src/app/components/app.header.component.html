@@ -6,3 +6,13 @@
 		 <label for="search">{{searchText}}</label>
     </div></div>
 </div>
+
+    
+    <button (click)="filterSearch('+ search.value + ' + '^red');" class="red"></button>
+    <button (click)="searchFlickrPhoto('orange')" class="orange"></button>
+    <button (click)="searchFlickrPhoto('yellow')" class="yellow"></button>
+    <button (click)="searchFlickrPhoto('green')" class="green"></button>
+    <button (click)="searchFlickrPhoto('blue')" class="blue"></button>
+    <button (click)="searchFlickrPhoto('purple')" class="purple"></button>
+    <button (click)="searchFlickrPhoto('black')" class="black"></button>
+    <button (click)="searchFlickrPhoto('white')" class="white"></button>

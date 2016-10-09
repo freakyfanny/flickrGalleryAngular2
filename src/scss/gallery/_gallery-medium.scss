@@ -1,15 +1,22 @@
 .tiles {
     .tile {
-        position: relative;
-        margin: $spacing/2;
-        width: 18vw;
-        height: 18vw;
-        img {
-            height: 18vw;
-            & + label {
+        margin: $spacing/5;
+        width: 24vw;
+        height: 24vw;
+        .image {
+            height: 24vw;
+            &:hover, &:focus {
+                label {
+                    left: 0;
+                    right: 0;
+                    top: 20vw;
+                }
+            }
+            label {
                 height: 3vw;
-                line-height: 3.25vw;
-                font-size: 1.5vw; 
+                line-height: 3vw;
+                font-size: 1.5vw;
+                padding: 0 1.5vw 0.5vw 1.5vw;
             }
         }
     }

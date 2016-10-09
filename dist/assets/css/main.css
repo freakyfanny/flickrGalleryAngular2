@@ -83,6 +83,18 @@ body {
       opacity: 0;
       transition: inherit; }
 
+.red {
+  width: 1vw;
+  height: 1vw;
+  background: #f03;
+  background-image: linear-gradient(to bottom, #f03, #f00);
+  border-radius: 5px; }
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none; }
+
 @media only screen and (min-width: 768px) {
   .header {
     height: 60px;
@@ -233,26 +245,26 @@ body {
     overflow: hidden;
     width: 32vw;
     height: 32vw; }
-    .tiles .tile img {
+    .tiles .tile .image {
       width: auto;
       height: 32vw;
+      background-color: transparent;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+      background-size: cover;
       transition: transform 500ms ease;
       -moz-transition: transform 500ms ease;
       -webkit-transition: transform 500ms ease; }
-      .tiles .tile img:hover, .tiles .tile img:focus {
+      .tiles .tile .image:hover, .tiles .tile .image:focus {
         justify-content: center;
         transform: scale(1.1);
         z-index: 2; }
-      .tiles .tile img:hover + label,
-      .tiles .tile img:focus + label {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transition: all 500ms ease-in-out 0s;
-        -moz-transition: all 500ms ease-in-out 0s;
-        -webkit-transition: all 500ms ease-in-out 0s; }
-      .tiles .tile img + label {
+        .tiles .tile .image:hover label, .tiles .tile .image:focus label {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 25vw; }
+      .tiles .tile .image label {
         color: #ffffff;
         background-color: rgba(0, 0, 0, 0.4);
         text-transform: uppercase;
@@ -260,84 +272,63 @@ body {
         font-weight: 800;
         overflow: hidden;
         text-overflow: ellipsis;
-        position: relative;
+        padding: 0 3vw 1vw 3vw;
         height: 6vw;
-        line-height: 6.5vw;
+        line-height: 6vw;
         font-size: 3vw;
-        position: relative;
-        z-index: 3;
+        position: absolute;
+        z-index: -3;
         left: 0;
-        bottom: -20%; }
+        top: 29vw; }
 
 @media only screen and (min-width: 768px) {
   .tiles .tile {
-    position: relative;
+    margin: 2px;
+    width: 24vw;
+    height: 24vw; }
+    .tiles .tile .image {
+      height: 24vw; }
+      .tiles .tile .image:hover label, .tiles .tile .image:focus label {
+        left: 0;
+        right: 0;
+        top: 20vw; }
+      .tiles .tile .image label {
+        height: 3vw;
+        line-height: 3vw;
+        font-size: 1.5vw;
+        padding: 0 1.5vw 0.5vw 1.5vw; } }
+
+@media only screen and (min-width: 1024px) {
+  @keyframes title {
+    0% {
+      transform: translateX(6vw); }
+    50% {
+      transform: translateY(4.5vw); }
+    100% {
+      transform: translateY(-3vw); } }
+  .tiles .tile {
     margin: 5px;
     width: 18vw;
     height: 18vw; }
-    .tiles .tile img {
+    .tiles .tile .image {
       height: 18vw; }
-      .tiles .tile img + label {
-        height: 3vw;
-        line-height: 3.25vw;
-        font-size: 1.5vw; } }
-
-@media only screen and (min-width: 1024px) {
-  .tiles {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    flex: auto; }
-    .tiles .tile {
-      margin: 5px;
-      cursor: pointer;
-      overflow: hidden;
-      max-width: 24vw;
-      min-width: 18vw;
-      height: 18vw; }
-      .tiles .tile img {
-        height: 18vw;
-        width: auto;
-        background-position: center 25%;
-        background-repeat: no-repeat; }
-        .tiles .tile img:hover + label,
-        .tiles .tile img:focus + label {
-          display: flex;
-          line-height: 35px;
-          position: relative;
+      .tiles .tile .image:hover, .tiles .tile .image:focus {
+        transition-property: transform; }
+        .tiles .tile .image:hover label, .tiles .tile .image:focus label {
+          position: absolute;
           left: 0;
           right: 0;
-          bottom: 10%;
-          color: #ffffff;
-          background-color: rgba(0, 0, 0, 0.4);
-          justify-content: center;
-          z-index: 3;
-          text-transform: uppercase;
-          text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-          font-weight: 800;
-          margin: 0;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          transition: all 800ms ease-in-out 0s;
-          -moz-transition: all 800ms ease-in-out 0s;
-          -webkit-transition: all 800ms ease-in-out 0s; }
-        .tiles .tile img + label {
-          position: relative;
-          left: 0;
-          bottom: -10%; }
-  .active {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    marginTop: -31vw;
-    marginLeft: -31vw;
-    boxShadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
-    transform: none; }
-  .active img {
-    width: 62vw;
-    height: 62vw; } }
+          top: 18vw;
+          transform: translateY(-3vw);
+          animation-name: title;
+          animation-duration: 800ms;
+          animation-delay: 0s;
+          animation-timing-function: linear;
+          animation-direction: alternate; }
+      .tiles .tile .image label {
+        line-height: 2.25vw;
+        height: 2vw;
+        font-size: 1vw;
+        padding: 0 1vw 1vw 1vw; } }
 
 /*# sourceMappingURL=main.css.map */
