@@ -28,7 +28,7 @@
             margin: 0 $spacing/2 $spacing $spacing/2;
             width: 100%;
             label {
-                line-height: 22px;
+                min-height: 22px;
                 display: flex;
                 justify-content: flex-start;
                 -webkit-transition: all 200ms ease;
