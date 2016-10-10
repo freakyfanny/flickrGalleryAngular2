@@ -96,8 +96,9 @@
 }
 
 button {
-    width: 16px;
-    height: 16px;
+    -webkit-appearance:none;
+    min-width: 16px;
+    min-height: 16px;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
