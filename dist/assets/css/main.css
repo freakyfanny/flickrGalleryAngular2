@@ -87,8 +87,8 @@ body {
       transition: inherit; }
 
 button {
-  width: 4vw;
-  height: 4vw;
+  width: 12px;
+  height: 12px;
   border-radius: 5px; }
 
 .red {
