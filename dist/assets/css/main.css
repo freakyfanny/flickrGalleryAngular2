@@ -30,6 +30,7 @@ body {
       display: flex;
       flex-flow: column-reverse;
       max-height: 65px;
+      min-height: 50px;
       margin: 0 5px 10px 5px;
       width: 100%; }
       .header .search .search__inputs label {
@@ -55,6 +56,9 @@ body {
         .header .search .search__inputs input:placeholder-shown + label {
           display: flex;
           align-self: center;
+          min-height: 20px;
+          line-height: 20px;
+          font-size: 12px;
           color: #ffffff;
           background-color: #000000;
           cursor: text;
@@ -73,7 +77,7 @@ body {
           transform: translate(0, 0) scale(1);
           cursor: default;
           color: #4d4d4d;
-          font-size: 18px;
+          font-size: 12px;
           text-align: center; }
     .header .search label {
       max-width: 66.666%;
@@ -83,8 +87,8 @@ body {
       transition: inherit; }
 
 button {
-  width: 2vw;
-  height: 2vw;
+  width: 4vw;
+  height: 4vw;
   border-radius: 5px; }
 
 .red {
@@ -165,7 +169,11 @@ button {
     font-size: 14px; }
     .header .search .search__inputs {
       margin-bottom: 10px;
-      width: 80%; } }
+      width: 80%; }
+  button {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 5px; } }
 
 @media only screen and (min-width: 1024px) {
   .header {
@@ -186,7 +194,15 @@ button {
         margin-bottom: 10px;
         width: 50%; }
         .header .search .search__inputs input {
-          padding: 5px 0; } }
+          padding: 5px 0; }
+          .header .search .search__inputs input:placeholder-shown + label {
+            min-height: 22px;
+            line-height: 22px;
+            font-size: 18px; }
+  button {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 5px; } }
 
 .tiles {
   display: flex;
@@ -251,6 +267,10 @@ button {
         left: 0;
         right: 0;
         top: 20vw; }
+      .tiles .tile .image input:placeholder-shown + label {
+        min-height: 22px;
+        line-height: 22px;
+        font-size: 16px; }
       .tiles .tile .image label {
         height: 3vw;
         line-height: 3vw;
