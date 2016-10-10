@@ -13,6 +13,13 @@
                     top: 20vw;
                 }
             }
+            input {
+                 &:placeholder-shown + label {
+                    min-height: 22px;
+                    line-height: 22px;
+                    font-size: 16px;
+                }
+            }
             label {
                 height: 3vw;
                 line-height: 3vw;

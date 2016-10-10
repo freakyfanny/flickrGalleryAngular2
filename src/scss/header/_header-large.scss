@@ -17,6 +17,12 @@
             width: 50%;
             input {
                 padding: 5px 0;
+                
+                 &:placeholder-shown + label {
+                    min-height: 22px;
+                    line-height: 22px;
+                    font-size: 18px;
+                }
             }
         }
     }
