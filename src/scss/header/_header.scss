@@ -56,7 +56,7 @@
                     align-self: center;
                     min-height: 20px;
                     line-height: 20px;
-                    font-size: 14px;
+                    font-size: 12px;
                     color: $color-background;
                     background-color: $color-primary;
                     cursor: text;
@@ -78,7 +78,7 @@
                     transform: translate(0, 0) scale(1);
                     cursor: default;
                     color: mix(#fff, $color-primary, 30%);
-                    font-size: 18px;
+                    font-size: 12px;
                     text-align: center;
                 }
             }
@@ -96,8 +96,8 @@
 }
 
 button {
-    width: 2vw;
-    height: 2vw;
+    width: 4vw;
+    height: 4vw;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
