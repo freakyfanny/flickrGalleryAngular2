@@ -25,3 +25,11 @@ body {
       padding-top: $header-height + $spacing*4;
     }
 }
+
+
+
+@keyframes rotateSpinner {
+	to {
+		transform: rotate(360deg);
+	}
+}

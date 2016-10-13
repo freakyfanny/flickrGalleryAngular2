@@ -1,6 +1,13 @@
-<header (search)="searchFlickrPhoto($event)" (filter)="searchFilterFlickrPhoto($event)">   
+<header (search)="searchFlickrPhoto($event)" (filter)="searchFilterFlickrPhoto($event)">
 </header>
-   
+
+<div *ngIf="loading" class="spinner">
+    <div class="spinnerwheel"></div>
+    <p>Waiting for flickr to respond</p>
+</div>
+
 <div class="tiles">
-    <div *ngFor="let photo of flickrPhotos" class="tile"><photo [photo]="photo"></photo></div>
+    <div *ngFor="let photo of flickrPhotos" class="tile">
+        <photo [photo]="photo"></photo>
+    </div>
 </div>

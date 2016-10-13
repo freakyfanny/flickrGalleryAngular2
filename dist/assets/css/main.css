@@ -12,6 +12,10 @@ body {
   body {
     padding-top: 100px; } }
 
+@keyframes rotateSpinner {
+  to {
+    transform: rotate(360deg); } }
+
 .header {
   height: 60px;
   padding: 10px;
@@ -315,5 +319,20 @@ button {
         height: 2vw;
         font-size: 1vw;
         padding: 0 1vw 1vw 1vw; } }
+
+.spinner {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 50%; }
+  .spinner .spinnerwheel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 0, 164, 0.4);
+    border-bottom-color: #ff00af;
+    animation: rotateSpinner 800ms linear infinite; }
 
 /*# sourceMappingURL=main.css.map */

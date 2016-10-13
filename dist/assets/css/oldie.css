@@ -12,6 +12,10 @@ body {
   body {
     padding-top: 100px; } }
 
+@keyframes rotateSpinner {
+  to {
+    transform: rotate(360deg); } }
+
 .header {
   height: 60px;
   padding: 10px;
