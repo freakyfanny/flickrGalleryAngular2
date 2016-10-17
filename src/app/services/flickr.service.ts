@@ -5,7 +5,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class FlickrService {    
-    flickrPhotos: Array<FlickrPhoto> = [];
+    flickrPhotos: FlickrPhoto[] = [];
     flickrApiKey : string = '158f9fda1dd419dc28f2855346f605a3';
     maxPhotos : number = 30;   //amount of photos to display on the webpage
 
@@ -20,7 +20,7 @@ export class FlickrService {
         return this.getPhotos(url);
     }
     
-    getFlickrFilterResult(query: string, color:string) : Array<FlickrPhoto> {
+    getFlickrFilterResult(query: string, color:string) : FlickrPhoto[] {
         
         // maps colors to colorcode used in api call
         var colorMap =
@@ -44,7 +44,7 @@ export class FlickrService {
     }
     
     
-    getRecent() : Array<FlickrPhoto> {
+    getRecent() : FlickrPhoto[] {
         let url= 'https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=' + this.flickrApiKey + '&format=json&nojsoncallback=1';
         console.log(url);
 
@@ -53,13 +53,13 @@ export class FlickrService {
         return this.getPhotos(url);
     }
     
-    getPhotos(url : string) : Array<FlickrPhoto> {
+    getPhotos(url : string) : FlickrPhoto[] {
                 this.http.get(url)
                 .map(res => res.json())
                 .subscribe( data => {
                     if(data.photos.total <= 0)
                     {
-                        return null;
+                        return this.flickrPhotos;
                     }
                     
                     for(var i in data.photos.photo)
