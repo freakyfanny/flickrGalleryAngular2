@@ -3,7 +3,7 @@
 
 <div *ngIf="flickrPhotos<1" class="spinner">
     <div class="spinnerwheel"></div>
-    <p>{{response()}}</p>
+    <p>{{message || response()}}</p>
 </div>
 
 <div class="tiles">

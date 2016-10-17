@@ -5,13 +5,13 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class FlickrService {    
-    flickrPhotos: FlickrPhoto[] = [];
+    flickrPhotos: Array<FlickrPhoto>;
     flickrApiKey : string = '158f9fda1dd419dc28f2855346f605a3';
     maxPhotos : number = 30;   //amount of photos to display on the webpage
 
     constructor(private http: Http) { };        
     
-    getFlickrResult(query: string) : Array<FlickrPhoto> {
+    getFlickrResult(query: string) {
         let url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + this.flickrApiKey + '&tags=' + query +'&format=json&nojsoncallback=1';
         console.log(url);        
        
@@ -20,7 +20,7 @@ export class FlickrService {
         return this.getPhotos(url);
     }
     
-    getFlickrFilterResult(query: string, color:string) : FlickrPhoto[] {
+    getFlickrFilterResult(query: string, color:string) {
         
         // maps colors to colorcode used in api call
         var colorMap =
@@ -44,7 +44,7 @@ export class FlickrService {
     }
     
     
-    getRecent() : FlickrPhoto[] {
+    getRecent() {
         let url= 'https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=' + this.flickrApiKey + '&format=json&nojsoncallback=1';
         console.log(url);
 
@@ -53,8 +53,9 @@ export class FlickrService {
         return this.getPhotos(url);
     }
     
-    getPhotos(url : string) : FlickrPhoto[] {
+    getPhotos(url : string) {
                 this.http.get(url)
+                .retry(4)
                 .map(res => res.json())
                 .subscribe( data => {
                     if(data.photos.total <= 0)
