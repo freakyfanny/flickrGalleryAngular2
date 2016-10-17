@@ -12,10 +12,13 @@ import { FlickrPhoto } from '../services/flickrphoto.model';
 
 export class AppComponent implements OnInit { 
     flickrPhotos: FlickrPhoto[] = [];
-    
     //includes http object to be used to get data in searchPhoto method
     constructor(private flickrService: FlickrService){       
         this.getRecentPhotos();
+    }
+    
+    response() : string {
+        return "Waiting for flickr to respond";
     }
 
     //find phots just with search
