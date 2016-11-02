@@ -4,7 +4,6 @@
     flex-direction: row;
     justify-content: center;
     position: relative;
-    
     .tile {
         align-items: center;
         justify-content: center;
@@ -37,21 +36,21 @@
                 }
             }
             label {
-                color: $color-background;
-                background-color: rgba(0, 0, 0, 0.4);
-                text-transform: uppercase;
-                text-shadow: 0 0 5px rgba(0, 0, 0, .6);
-                font-weight: 800;
-                overflow: hidden;
-                text-overflow: ellipsis;
                 padding: 0 3vw 1vw 3vw;
-                height: 6vw;
-                line-height: 6vw;
-                font-size: 3vw;
                 position: absolute;
                 left: 0;
                 right: 0;
                 top: 25vw;
+                color: $color-background;
+                background-color: rgba(0, 0, 0, 0.4);
+                height: 6vw;
+                font-size: 3vw;
+                font-weight: 800;
+                text-transform: uppercase;
+                text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+                line-height: 6vw;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
