@@ -144,7 +144,7 @@ gulp.task('nodeMods', function() {
 });
 
 gulp.task("default", ["clean"], function() {
-  console.log("welcome to this application, we gonna build an awesome formbuilder");
+  console.log("welcome to this application, we gonna build an awesome gallery");
 
   gulp.start('dist');
 });

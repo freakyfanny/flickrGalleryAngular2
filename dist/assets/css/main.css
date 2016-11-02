@@ -245,21 +245,21 @@ button {
           right: 0;
           top: 25vw; }
       .tiles .tile .image label {
-        color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.4);
-        text-transform: uppercase;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-        font-weight: 800;
-        overflow: hidden;
-        text-overflow: ellipsis;
         padding: 0 3vw 1vw 3vw;
-        height: 6vw;
-        line-height: 6vw;
-        font-size: 3vw;
         position: absolute;
         left: 0;
         right: 0;
-        top: 25vw; }
+        top: 25vw;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 6vw;
+        font-size: 3vw;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        line-height: 6vw;
+        overflow: hidden;
+        text-overflow: ellipsis; }
 
 @media only screen and (min-width: 768px) {
   .tiles .tile {
@@ -278,14 +278,14 @@ button {
         line-height: 22px;
         font-size: 16px; }
       .tiles .tile .image label {
-        height: 3vw;
-        line-height: 3vw;
-        font-size: 1.5vw;
         padding: 0 1.5vw 0.5vw 1.5vw;
         position: absolute;
-        z-index: -3;
         left: 0;
-        top: 29vw; } }
+        top: 29vw;
+        z-index: -3;
+        height: 3vw;
+        line-height: 3vw;
+        font-size: 1.5vw; } }
 
 @media only screen and (min-width: 1024px) {
   @keyframes title {
@@ -315,10 +315,10 @@ button {
           animation-timing-function: linear;
           animation-direction: alternate; }
       .tiles .tile .image label {
-        line-height: 2.25vw;
+        padding: 0 1vw 1vw 1vw;
         height: 2vw;
-        font-size: 1vw;
-        padding: 0 1vw 1vw 1vw; } }
+        line-height: 2.25vw;
+        font-size: 1vw; } }
 
 .spinner {
   justify-content: center;
