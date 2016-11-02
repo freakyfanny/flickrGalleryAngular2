@@ -59,13 +59,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new ExtractTextPlugin('assets/ie.css', {            
-            publicPath: 'assets/',
+        new ExtractTextPlugin('assets/css/ie.css', {            
+            publicPath: 'assets/css/',
             allChunks: true,
             sourceMap: true
         }),        
-        new ExtractTextPlugin('assets/main.css', {            
-            publicPath: 'assets/',
+        new ExtractTextPlugin('assets/css/main.css', {            
+            publicPath: 'assets/css/',
             allChunks: true,
             sourceMap: true
         }),
