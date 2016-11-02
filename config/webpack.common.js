@@ -1,6 +1,15 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var path = require('path');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+
+const sassLoaders = [
+  'css-loader',
+  'sass-loader?indentedSyntax=sass&sourceMap&includePaths[]=' + path.resolve(__dirname, './src')
+];
 
 module.exports = {
     entry: {
@@ -23,6 +32,22 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html'
             },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file',
+                query: {
+                    name: 'assets/fonts/[name].[ext]',
+                    context: 'src/'
+                }
+            },
+            {
+                test: /\-ie.scss$/,
+                loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+            }
         ]
     },
 
@@ -33,6 +58,32 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+        new ExtractTextPlugin('assets/ie.css', {            
+            publicPath: 'assets/',
+            allChunks: true,
+            sourceMap: true
+        }),        
+        new ExtractTextPlugin('assets/main.css', {            
+            publicPath: 'assets/',
+            allChunks: true,
+            sourceMap: true
+        }),
+        new OptimizeCssAssetsPlugin({
+          assetNameRegExp: /\.optimize\.css$/g,
+          cssProcessor: require('cssnano'),
+          cssProcessorOptions: { discardComments: {removeAll: true } },
+          canPrint: true
         })
+        /*,
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            output: {
+            comments: false
+            } 
+        }),
+        new UnminifiedWebpackPlugin()*/
     ]
 };
