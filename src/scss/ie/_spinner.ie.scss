@@ -1,0 +1,17 @@
+.spinner {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    .spinnerwheel {
+        $tilespinner-size: 50px;
+        width: $tilespinner-size;
+        height: $tilespinner-size;
+        border-radius: 50%;
+        border: 5px solid rgba(255, 00, 164, 0.4);
+        border-bottom-color: #ff00af;
+        animation: rotateSpinner 800ms linear infinite;
+    }
+}

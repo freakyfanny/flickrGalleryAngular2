@@ -6,6 +6,17 @@ var path = require('path');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
+var ieCSSPlugin =  new ExtractTextPlugin('assets/css/main.ie.css', {            
+            publicPath: 'assets/css/',
+            allChunks: true,
+            sourceMap: true
+        });
+var mainCSSPlugin = new ExtractTextPlugin('assets/css/main.css', {            
+            publicPath: 'assets/css/',
+            allChunks: true,
+            sourceMap: true
+        });
+
 const sassLoaders = [
   'css-loader',
   'sass-loader?indentedSyntax=sass&sourceMap&includePaths[]=' + path.resolve(__dirname, './src')
@@ -41,12 +52,12 @@ module.exports = {
                 }
             },
             {
-                test: /\-ie.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+                test: /\.ie\.css$/,
+                loader: ieCSSPlugin.extract('style-loader', sassLoaders.join('!'))
             },
             {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+                test: /\.scss$/, exclude: /\.ie\.css$/,
+                loader: mainCSSPlugin.extract('style-loader', sassLoaders.join('!'))
             }
         ]
     },
@@ -59,22 +70,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new ExtractTextPlugin('assets/css/ie.css', {            
-            publicPath: 'assets/css/',
-            allChunks: true,
-            sourceMap: true
-        }),        
-        new ExtractTextPlugin('assets/css/main.css', {            
-            publicPath: 'assets/css/',
-            allChunks: true,
-            sourceMap: true
-        }),
+        
         new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.optimize\.css$/g,
           cssProcessor: require('cssnano'),
           cssProcessorOptions: { discardComments: {removeAll: true } },
           canPrint: true
-        })
+        }),
+        ieCSSPlugin,
+        mainCSSPlugin
         /*,
         new webpack.optimize.UglifyJsPlugin({
             compress: {

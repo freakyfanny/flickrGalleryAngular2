@@ -21,7 +21,7 @@
                 display: flex;
                 justify-content: flex-start;
                 position: relative;
-                top: -10vw;
+                top: 1vh;
                 max-width: 66.666%;
                 color: mix($color-background, $color-primary, 60%);
             }
@@ -127,6 +127,10 @@
             }
         }
     }
+}
+
+button {
+    margin: 0px $spacing/2 $spacing $spacing/2;
 }
 
 .red {
