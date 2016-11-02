@@ -6,7 +6,7 @@ var path = require('path');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
-var ieCSSPlugin =  new ExtractTextPlugin('assets/css/main.ie.css', {            
+var ieCSSPlugin =  new ExtractTextPlugin('assets/css/ie.css', {            
             publicPath: 'assets/css/',
             allChunks: true,
             sourceMap: true
@@ -52,11 +52,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.ie\.css$/,
+                test: /\ie.scss$/,
                 loader: ieCSSPlugin.extract('style-loader', sassLoaders.join('!'))
             },
             {
-                test: /\.scss$/, exclude: /\.ie\.css$/,
+                test: /\.scss$/, exclude: /\ie.scss$/,
                 loader: mainCSSPlugin.extract('style-loader', sassLoaders.join('!'))
             }
         ]
